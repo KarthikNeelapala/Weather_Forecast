@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Information</title>
+    <style>
+      body{
+        background-color:gray;
+      }
+      .main{
+        border :3px solid black;
+        padding:2%;
+        width:25%;
+        
+      }
+        button {
+          border-radius:25px;
+          font-size:xx-large;
+        
+        }
+        .details{
+          border: 3px solid black;
+          width:25%;
+        }
+        
+    </style>
+  </head>
+<body>
+  <center>
+  <div class="main">
+  <form method="post" action="/login/thirdpage">
+    <h2>Welcome to weather forecast</h2>
+    <h3>Enter name of city to know weather conditions</h3>
+    <input type="text" name="place" placeholder="Enter name of city">
+    <br><br><button id="but">Submit</button> </form></div></center>
+    <br><br><br>
+  <center>    
+    <div class="details">
+      <h2>The deatils are here</h2>
+      <h3>City:<%=city%> </h3>
+      <h3>Temperature: <%=temp%> °C</h3>
+    </div>
+  </center>
+    
+    
+  
+</body>
+</html>

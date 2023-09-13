@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .box3{
+                border: 2px solid black;
+                border-radius: 25px;
+                padding: 2%;
+                width: 20%;
+                position: relative;
+                margin-top: 10%;
+            }
+            input{
+                border-radius: 25px;
+                padding: 1%;
+            }
+            button{
+                border-radius: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box3">
+        <h2>Hey just one more step...!</h2>
+        <form method="POST" action="/login/register">
+            Firstname: <input type="text" name="firstname" placeholder="Enter First name"><br><br>
+            Lastname: <input type="text" name="lastname" placeholder="Enter  Last name"><br><br>
+            EmailID:    <input type="email" name="email" placeholder="Enter email"><br><br>
+            Password: <input type="password" name="password" placeholder="Enter password"><br><br>
+           <center><button>Create account</button></center>
+        </form></div>
+    </body>
+</html>
