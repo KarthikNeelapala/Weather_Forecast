@@ -3,9 +3,7 @@
     <head>
         <style>
             body{
-                background: #2980B9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background-color: lightgoldenrodyellow;
 
                 display: flex;
                 align-items: center;
@@ -13,11 +11,15 @@ background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+
             }
             .box3{
                 border: 2px solid black;
+                color:white;
                 border-radius: 25px;
+                background-color: grey ;
                 padding: 2%;
                 width: 20%;
                 position: relative;
                 margin-top: 10%;
+                box-shadow:5px 10px black;
+                text-shadow:2px 3px black;
             }
             input{
                 border-radius: 25px;
@@ -25,6 +27,10 @@ background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+
             }
             button{
                 border-radius: 25px;
+            }
+            #err{
+                color: red;
+                font-size: larger;
             }
         </style>
     </head>
@@ -36,7 +42,8 @@ background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+
             Lastname: <input type="text" name="lastname" placeholder="Enter  Last name"><br><br>
             EmailID:    <input type="email" name="email" placeholder="Enter email"><br><br>
             Password: <input type="password" name="password" placeholder="Enter password"><br><br>
-           <center><button>Create account</button></center>
+           <center><button>Create account</button></center><br>
+           <center><span id="err"><%=msg%></span></center>
         </form></div>
     </body>
 </html>
