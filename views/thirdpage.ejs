@@ -4,27 +4,78 @@
     <title>Weather Information</title>
     <style>
       body{
-        background-color:gray;
+        background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+       }
+
+      .main{
+        border-radius: 25px;
+      }
+      .details{
+        border-radius: 25px;
       }
       .main{
         border :3px solid black;
-        padding:2%;
+        padding:1%;
         width:25%;
+        background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       
+        color:rgb(255, 255, 255);
+        box-shadow: 4px 6px #ffffff36;
+        text-shadow: 3px 2px #000000;
         
       }
         button {
           border-radius:25px;
-          font-size:xx-large;
+          font-size:large;
+          background-color: rgb(48, 49, 49);
+          color:white;
+          box-shadow:3px 6px ##ffffff36;
+          padding:10px;
         
         }
         .details{
           border: 3px solid black;
           width:25%;
+          color:rgb(255, 255, 255);
+          box-shadow: 4px 6px #ffffff36;
+        text-shadow: 3px 2px #000000;
+        background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        input{
+          border-radius: 25px;
+        }
+        a{
+          text-decoration: none;
+          margin-left: 90%;
+          color: blue;
+        }
+        .recentSearch{
+          margin:20px;
+          border-radius: 10px;
+          padding:20px;
+          color:rgb(255, 255, 255);
+          box-shadow: 4px 6px #ffffff36;
+        text-shadow: 3px 2px #000000;
+        background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
         }
         
     </style>
   </head>
 <body>
+  <a href="http://localhost:3000/"><button>Logout</button></a>
   <center>
   <div class="main">
   <form method="post" action="/login/thirdpage">
@@ -35,10 +86,14 @@
     <br><br><br>
   <center>    
     <div class="details">
-      <h2>The deatils are here</h2>
-      <h3>City:<%=city%> </h3>
-      <h3>Temperature: <%=temp%> °C</h3>
+      <h3>The deatils are here</h3>
+      <h4>City:<%=city%> </h4>
+      <h4>Temperature: <%=temp%> °C</h4>
     </div>
+  </center>
+  <center>
+  <h3>Recent search:</h3>
+  <h4 class="recentSearch"><%=userPlaces%></h4>
   </center>
     
     
