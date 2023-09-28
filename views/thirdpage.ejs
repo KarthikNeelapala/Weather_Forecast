@@ -26,8 +26,8 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
 
        
         color:rgb(255, 255, 255);
-        box-shadow: 4px 6px #ffffff36;
-        text-shadow: 3px 2px #000000;
+        box-shadow: 3px 5px #ffffff36;
+        text-shadow: 2px 2px #000000;
         
       }
         button {
@@ -35,9 +35,13 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
           font-size:large;
           background-color: rgb(48, 49, 49);
           color:white;
-          box-shadow:3px 6px ##ffffff36;
-          padding:10px;
-        
+          box-shadow:2px 5px #ffffff36;
+        }
+        .box1{
+          display: flex;
+          flex-direction: row;
+          align-items: end;
+          justify-content: flex-start;
         }
         .details{
           border: 3px solid black;
@@ -58,12 +62,22 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
           margin-left: 90%;
           color: blue;
         }
+        #hi{
+          font-size: larger;
+          color: gold;
+          font-style: italic;
+        }
+        #no{
+          font-size: larger;
+          color: red;
+        }
         .recentSearch{
-          margin:20px;
+          margin:17px;
           border-radius: 10px;
-          padding:20px;
+          padding:17px;
+          border: 1px solid black;
           color:rgb(255, 255, 255);
-          box-shadow: 4px 6px #ffffff36;
+          box-shadow: 4px 2px 2px 2px #ffffff36;
         text-shadow: 3px 2px #000000;
         background: #16222A;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
@@ -75,7 +89,9 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
     </style>
   </head>
 <body>
-  <a href="http://localhost:3000/"><button>Logout</button></a>
+  <div class="box1">
+  <span id="hi"><%=hello%></span><span><a href="http://localhost:3000/"><button>Logout</button></a></span>
+  </div>
   <center>
   <div class="main">
   <form method="post" action="/login/thirdpage">
@@ -83,12 +99,13 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
     <h3>Enter name of city to know weather conditions</h3>
     <input type="text" name="place" placeholder="Enter name of city">
     <br><br><button id="but">Submit</button> </form></div></center>
-    <br><br><br>
+    <br><br>
   <center>    
     <div class="details">
       <h3>The deatils are here</h3>
       <h4>City:<%=city%> </h4>
       <h4>Temperature: <%=temp%> °C</h4>
+      <span id="no"><%=nofound%></span>
     </div>
   </center>
   <center>
