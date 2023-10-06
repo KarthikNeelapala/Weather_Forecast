@@ -63,7 +63,7 @@ app.post('/login/register', async (req, res) => {
           const user1Data = user1Snapshot.docs[0].data();
           const hPassword = user1Data.Password;
         const password = req.body.lpassword;
-        bcrypt.compare(password, hpassword, function(err, result) {
+        bcrypt.compare(password, hPassword, function(err, result) {
         db.collection('wd401')
         .where("Email","==",email)
         .where("Password","==",password)
